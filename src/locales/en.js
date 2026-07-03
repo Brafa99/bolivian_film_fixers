@@ -89,7 +89,7 @@ numbers:{
 
 contact: {
 
-    subtitle: "GET IN TOUCH",
+    subtitle: "CONTACT",
 
     title: "BOLIVIAN FILM FIXER MORE THAN AN EXPERIENCE: A FRIENDSHIP! SEE YOU SOON!",
 

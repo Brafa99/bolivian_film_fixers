@@ -172,7 +172,7 @@
 
     display:block;
 
-    transition:.7s;
+    transition:.8s;
 
 }
 
@@ -220,6 +220,13 @@
     margin-bottom:10px;
 
     font-weight:800;
+
+}
+
+/* Ajuste específico para la imagen de Jaime */
+.team-member.reverse .team-image img{
+
+    object-position:15% center;
 
 }
 
@@ -319,6 +326,20 @@
 
 @media(max-width:900px){
 
+    .team{
+
+        background:
+            linear-gradient(
+                rgba(0,0,0,.62),
+                rgba(0,0,0,.62)
+            ),
+            url("../../assets/images/placeholders/1920x1200-0.jpg")
+            center center/cover
+            scroll
+            no-repeat;
+
+    }
+
     .team-header{
 
         padding:90px 0;
@@ -337,13 +358,16 @@
 
     }
 
+    @media (max-width:900px){
+
     .team-member,
-
     .team-member.reverse{
-
         grid-template-columns:1fr;
-
+        padding:20px;              /* <-- IMPORTANTE */
+        min-height:auto;
     }
+
+}
 
     .team-member.reverse .team-content{
 
@@ -358,14 +382,13 @@
     }
 
     .team-image{
-
-        height:430px;
-
-    }
+    aspect-ratio: 4 / 5;
+    height:auto;
+}
 
     .team-content{
 
-        padding:45px 30px;
+        padding:35px 22px;
 
         background-attachment:scroll;
 
