@@ -136,7 +136,7 @@
     
     margin:0 auto;
 
-    padding:0 120px;
+    padding:0 50px;
 
     grid-template-columns:1fr 1fr;
 
@@ -188,15 +188,6 @@
 
     position:absolute;
 
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.62),
-            rgba(0,0,0,.05)
-        );
-
 }
 
 .team-image-overlay{
@@ -226,7 +217,7 @@
 /* Ajuste específico para la imagen de Jaime */
 .team-member.reverse .team-image img{
 
-    object-position:15% center;
+    object-position:25% center;
 
 }
 
