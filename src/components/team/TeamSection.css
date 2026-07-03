@@ -1,0 +1,402 @@
+.team{
+
+     background:
+        linear-gradient(
+        rgba(0,0,0,.62),
+        rgba(0,0,0,.62)
+        ),
+        url("../../assets/images/placeholders/1920x1200-0.jpg")
+        center center/cover
+        fixed
+        no-repeat;
+
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.team-header{
+
+    position:relative;
+
+    padding:110px 0;
+
+    overflow:hidden;
+
+}
+
+.team-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+     background:
+        linear-gradient(
+        rgba(0,0,0,.62),
+        rgba(0,0,0,.62)
+        ),
+        url("../../assets/images/placeholders/1920x1200-0.jpg")
+        center center/cover
+        fixed
+        no-repeat;
+
+
+}
+
+.team-header-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:0 50px;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+/* OUR AWESOME TEAM */
+
+/* OUR AWESOME TEAM */
+
+.team-header-content span{
+
+    display:inline-block;
+
+    margin-bottom:24px;
+
+    color:#D8A928;
+
+    font-size:clamp(2.3rem,4vw,5rem);
+
+    font-weight:800;
+
+    letter-spacing:.55rem;
+
+    text-transform:uppercase;
+
+    line-height:1;
+
+}
+
+/* Meet the people */
+
+/* Meet the People */
+
+.team-header-content h2{
+
+    margin:0 0 28px;
+
+    color:#fff;
+
+    font-size:clamp(2rem,3vw,3.2rem);
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    text-shadow:0 8px 24px rgba(0,0,0,.35);
+
+}
+
+.team-header-content p{
+
+    max-width:820px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:1.12rem;
+
+    line-height:1.9;
+
+}
+
+/* =========================
+   MEMBERS
+========================= */
+
+.team-member{
+
+    width:100%;
+
+    display:grid;
+    
+    margin:0 auto;
+
+    padding:0 120px;
+
+    grid-template-columns:1fr 1fr;
+
+    min-height:650px;
+
+}
+
+.team-member.reverse{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.team-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.team-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.7s;
+
+}
+
+.team-member:hover .team-image img{
+
+    transform:scale(1.05);
+
+}
+
+.team-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.62),
+            rgba(0,0,0,.05)
+        );
+
+}
+
+.team-image-overlay{
+
+    position:absolute;
+
+    left:60px;
+
+    bottom:60px;
+
+    z-index:2;
+
+    color:white;
+
+}
+
+.team-image-overlay h3{
+
+    font-size:2.5rem;
+
+    margin-bottom:10px;
+
+    font-weight:800;
+
+}
+
+.team-role{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(216,169,40,.18);
+
+    border:1px solid rgba(216,169,40,.35);
+
+    color:#D8A928;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:.18rem;
+
+    text-transform:uppercase;
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.team-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:90px 70px;
+
+    background:
+        linear-gradient(
+            rgba(8,12,18,.76),
+            rgba(8,12,18,.76)
+        ),
+        url("../../assets/images/placeholders/1920x1200-0.jpg")
+        center center/cover
+        fixed
+        no-repeat;
+
+}
+
+.team-highlight{
+
+    font-size:1.32rem;
+
+    line-height:1.85;
+
+    color:#fff;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.team-content p:last-child{
+
+    color:rgba(255,255,255,.76);
+
+    line-height:2;
+
+    text-align:justify;
+
+}
+
+/* =========================
+   DESKTOP XL
+========================= */
+
+@media(min-width:1600px){
+
+    .team-header-content{
+
+        padding:0;
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .team-header{
+
+        padding:90px 0;
+
+    }
+
+    .team-header::before{
+
+        background-attachment:scroll;
+
+    }
+
+    .team-header-content{
+
+        padding:0 20px;
+
+    }
+
+    .team-member,
+
+    .team-member.reverse{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .team-member.reverse .team-content{
+
+        order:2;
+
+    }
+
+    .team-member.reverse .team-image{
+
+        order:1;
+
+    }
+
+    .team-image{
+
+        height:430px;
+
+    }
+
+    .team-content{
+
+        padding:45px 30px;
+
+        background-attachment:scroll;
+
+    }
+
+    .team-header-content span{
+
+    font-size:clamp(2rem,8vw,3rem);
+
+    letter-spacing:.22rem;
+
+}
+
+.team-header-content h2{
+
+    font-size:clamp(1.5rem,5vw,2.1rem);
+
+}
+
+    .team-image-overlay{
+
+        left:30px;
+
+        bottom:30px;
+
+    }
+
+    .team-image-overlay h3{
+
+        font-size:2rem;
+
+    }
+
+}

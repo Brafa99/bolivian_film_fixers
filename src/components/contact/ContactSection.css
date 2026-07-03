@@ -1,0 +1,193 @@
+.contact{
+
+    position:relative;
+
+    padding:120px 0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    overflow:hidden;
+
+}
+
+.contact-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("../../assets/images/placeholders/1920x1200-0.jpg")
+        center center/cover
+        fixed
+        no-repeat;
+
+}
+
+.contact-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:0 50px;
+
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.contact .section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.contact .section-title span{
+
+    display:inline-block;
+
+    margin-bottom:24px;
+
+    color:#D8A928;
+
+    font-size:clamp(2.3rem,4vw,5rem);
+
+    font-weight:800;
+
+    letter-spacing:.55rem;
+
+    text-transform:uppercase;
+
+    line-height:1;
+
+}
+
+.contact .section-title h2{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:clamp(2rem,3vw,2.2rem);
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    text-shadow:0 8px 24px rgba(0,0,0,.35);
+
+}
+
+.contact .section-title p,
+
+.section-description{
+
+    max-width:760px;
+
+    margin:24px auto 0;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+/* =========================
+   GRID
+========================= */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:50px;
+
+    align-items:stretch;
+
+}
+
+/* =========================
+   DESKTOP XL
+========================= */
+
+@media(min-width:1600px){
+
+    .contact-container{
+
+        padding:0 5px;
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .contact{
+
+        padding:90px 0;
+
+        background-attachment:scroll;
+
+    }
+
+    .contact-container{
+
+        padding:0 20px;
+
+    }
+
+    .contact .section-title{
+
+        margin-bottom:45px;
+
+    }
+
+    .contact .section-title span{
+
+    font-size:clamp(2rem,8vw,3rem);
+
+    letter-spacing:.22rem;
+
+}
+
+    .contact .section-title h2{
+
+    font-size:clamp(1.5rem,5vw,1.1rem);
+
+}
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+}

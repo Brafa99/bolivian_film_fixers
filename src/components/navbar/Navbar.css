@@ -1,0 +1,339 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(20,20,20,.82);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.navbar-container{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+    height:88px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.navbar-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    flex-shrink:0;
+
+}
+
+.navbar-logo img{
+
+    height:58px;
+
+    display:block;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.navbar-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+.navbar-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.navbar-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    letter-spacing:.12rem;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.navbar-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#D8A928;
+
+    transition:.3s;
+
+}
+
+.navbar-links a:hover{
+
+    color:#D8A928;
+
+}
+
+.navbar-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   LANGUAGE
+=========================== */
+
+.language-selector{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.language-selector button{
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    padding:10px 14px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.language-selector button:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.language-selector button.active{
+
+    background:#D8A928;
+
+    color:#fff;
+
+    box-shadow:0 10px 25px rgba(216,169,40,.35);
+
+}
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-button{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    padding:0;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:960px){
+
+    .navbar-container{
+
+        height:78px;
+
+    }
+
+    .navbar-logo img{
+
+        height:46px;
+
+    }
+
+    .menu-button{
+
+        display:block;
+
+        z-index:1200;
+
+    }
+
+    .navbar-menu{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:290px;
+
+        height:100vh;
+
+        background:#181818;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:flex-start;
+
+        gap:45px;
+
+        padding:40px;
+
+        transition:.35s;
+
+        box-shadow:-10px 0 35px rgba(0,0,0,.35);
+
+    }
+
+    .navbar-menu.open{
+
+        right:0;
+
+    }
+
+    .navbar-links{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:28px;
+
+        width:100%;
+
+    }
+
+    .navbar-links li{
+
+        width:100%;
+
+    }
+
+    .navbar-links a{
+
+        font-size:1.05rem;
+
+        width:100%;
+
+        display:block;
+
+    }
+
+    .language-selector{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+        padding-top:25px;
+
+        border-top:1px solid rgba(255,255,255,.08);
+
+    }
+
+}
+
+/* ===========================
+   SMALL DEVICES
+=========================== */
+
+@media (max-width:480px){
+
+    .navbar-menu{
+
+        width:100%;
+
+    }
+
+}

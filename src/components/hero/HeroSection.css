@@ -1,0 +1,215 @@
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    min-height:700px;
+    overflow:hidden;
+    background:#000;
+}
+
+.hero-video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.72)
+        );
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+    width:min(1100px,90%);
+    height:100%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:heroFade .9s ease;
+    color:white;
+
+}
+
+.hero-badge{
+
+    margin-bottom:20px;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.hero h1{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:.95;
+
+    margin-bottom:28px;
+
+    font-size:clamp(3.5rem,8vw,6.5rem);
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+}
+
+.hero h1 span{
+
+    color:#D8A928;
+
+}
+
+.hero p{
+
+    width:min(700px,100%);
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.92);
+
+    margin-bottom:45px;
+
+}
+
+.hero-button{
+
+    padding:18px 38px;
+
+    border-radius:40px;
+
+    background:#D8A928;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-4px);
+
+    background:#e0b94c;
+
+    box-shadow:0 15px 35px rgba(216,169,40,.35);
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:2rem;
+
+    text-decoration:none;
+
+    animation:bounce 2s infinite;
+
+    z-index:2;
+
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    40%{
+
+        transform:translate(-50%,-10px);
+
+    }
+
+    60%{
+
+        transform:translate(-50%,-5px);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero-content{
+
+        padding-inline:20px;
+
+    }
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
