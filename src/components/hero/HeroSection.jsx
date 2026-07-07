@@ -21,6 +21,8 @@ function HeroSection() {
 
         setIsPlaying(false);
 
+        console.log("Audio pausado (YouTube)");
+
     };
 
     window.addEventListener("pauseHeroAudio", pauseAudio);
@@ -33,13 +35,33 @@ function HeroSection() {
 
 }, []);
 
+
    useEffect(() => {
 
-    const startAudio = async () => {
+    const removeListeners = () => {
+
+        document.removeEventListener("click", startAudio);
+        document.removeEventListener("pointerdown", startAudio);
+        document.removeEventListener("touchstart", startAudio);
+        document.removeEventListener("keydown", startAudio);
+
+        window.removeEventListener("scroll", startAudio);
+        window.removeEventListener("wheel", startAudio);
+        window.removeEventListener("mousewheel", startAudio);
+        window.removeEventListener("touchmove", startAudio);
+
+    };
+
+    const startAudio = async (event) => {
 
         const audio = audioRef.current;
 
         if (!audio) return;
+
+        // Ya está reproduciendo
+        if (!audio.paused) return;
+
+        console.log("Interacción:", event.type);
 
         try {
 
@@ -49,33 +71,55 @@ function HeroSection() {
 
             setIsPlaying(true);
 
-            console.log("Audio iniciado");
+            console.log("Audio iniciado correctamente");
+
+            removeListeners();
 
         } catch (err) {
 
-            console.log("Error:", err.name);
+            console.log("Autoplay bloqueado");
+            console.log(err.name);
             console.log(err.message);
 
         }
 
-        document.removeEventListener("pointerdown", startAudio);
-        document.removeEventListener("keydown", startAudio);
-
     };
 
+    // Desktop
+    document.addEventListener("click", startAudio);
     document.addEventListener("pointerdown", startAudio);
-document.addEventListener("keydown", startAudio);
-window.addEventListener("scroll", startAudio, { once: true });
+    document.addEventListener("keydown", startAudio);
+
+    // Mobile
+    document.addEventListener("touchstart", startAudio, {
+        passive: true
+    });
+
+    document.addEventListener("touchmove", startAudio, {
+        passive: true
+    });
+
+    // Scroll
+    window.addEventListener("scroll", startAudio, {
+        passive: true
+    });
+
+    window.addEventListener("wheel", startAudio, {
+        passive: true
+    });
+
+    window.addEventListener("mousewheel", startAudio, {
+        passive: true
+    });
 
     return () => {
 
-    document.removeEventListener("pointerdown", startAudio);
-    document.removeEventListener("keydown", startAudio);
-    window.removeEventListener("scroll", startAudio);
+        removeListeners();
 
-};
+    };
 
 }, []);
+
 
 const toggleAudio = () => {
 
@@ -85,7 +129,17 @@ const toggleAudio = () => {
 
     if (audio.paused) {
 
-        audio.play();
+        audio.play()
+    .then(() => {
+
+        setIsPlaying(true);
+
+    })
+    .catch((err) => {
+
+        console.log(err);
+
+    });
 
         setIsPlaying(true);
 

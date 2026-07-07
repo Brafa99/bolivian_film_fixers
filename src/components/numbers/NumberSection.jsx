@@ -60,7 +60,7 @@ function NumbersSection(){
 
         {
 
-            value:1010,
+            value:75,
 
             label:t.numbers.projects
 
@@ -68,7 +68,7 @@ function NumbersSection(){
 
         {
 
-            value:120,
+            value:50,
 
             label:t.numbers.clients
 

@@ -4,49 +4,74 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+console.log("API:", process.env.YOUTUBE_API_KEY);
+console.log("CHANNEL:", process.env.CHANNEL_HANDLE);
+
 const youtube = google.youtube({
     version: "v3",
     auth: process.env.YOUTUBE_API_KEY,
 });
 
-function detectCategory(title, description) {
 
-    const text = `${title} ${description}`.toLowerCase();
+const EXTRA_VIDEO_URLS = [
 
-    if (
-        text.includes("documentary") ||
-        text.includes("history") ||
-        text.includes("nature") ||
-        text.includes("vice")
-    ) {
-        return "Documentary";
-    }
+    "https://youtu.be/B2PC_7wkhPQ",
 
-    if (
-        text.includes("reality") ||
-        text.includes("travel") ||
-        text.includes("dangerous roads") ||
-        text.includes("don't drive here")
-    ) {
-        return "Reality TV";
-    }
+    "https://youtu.be/fUn7Nm9qZ9A",
 
-    if (
-        text.includes("djarum") ||
-        text.includes("commercial") ||
-        text.includes("spot")
-    ) {
-        return "Commercial";
-    }
+    "https://youtu.be/OmXsSfiIJHI",
 
-    if (
-        text.includes("adventure") ||
-        text.includes("treasure")
-    ) {
-        return "Adventure";
-    }
+    "https://youtu.be/A7ZFN7X5lZU",
 
-    return "Production";
+    "https://youtu.be/VaVDEibbbvM",
+
+    "https://www.youtube.com/watch?v=hZH-5kI3reM",
+
+    "https://www.youtube.com/watch?v=14rnnr3-kLU",
+
+    "https://youtu.be/gX4V__oG-wk"
+
+];
+
+
+function extractVideoId(url) {
+
+    const short = url.match(/youtu\.be\/([^?]+)/);
+
+    if (short) return short[1];
+
+    const normal = url.match(/[?&]v=([^&]+)/);
+
+    if (normal) return normal[1];
+
+    return null;
+
+}
+
+async function getExtraVideos() {
+
+    const ids = EXTRA_VIDEO_URLS
+        .map(extractVideoId)
+        .filter(Boolean);
+
+    if (!ids.length) return [];
+
+    const response = await youtube.videos.list({
+
+        part: [
+
+            "snippet",
+            "contentDetails",
+            "statistics"
+
+        ],
+
+        id: ids
+
+    });
+
+    return response.data.items;
+
 }
 
 function formatDuration(duration) {
@@ -108,55 +133,63 @@ async function exportVideos() {
 
     );
 
-    const videos = await youtube.videos.list({
+    const channelVideos = await youtube.videos.list({
 
-        part: [
+    part: [
 
-            "snippet",
-            "contentDetails",
-            "statistics"
+        "snippet",
+        "contentDetails",
+        "statistics"
 
-        ],
+    ],
 
-        id: ids
+    id: ids
 
-    });
+});
 
-    const projects = videos.data.items.map((video, index) => ({
+const extraVideos = await getExtraVideos();
 
-        id: index + 1,
+const allVideos = [
 
-        title: video.snippet.title,
+    ...channelVideos.data.items,
 
-        description: video.snippet.description,
+    ...extraVideos
 
-        category: detectCategory(
+];
 
-            video.snippet.title,
+    const projects = allVideos.map((video, index) => ({
 
-            video.snippet.description
+    id: index + 1,
 
-        ),
+    title: video.snippet.title,
 
-        youtubeId: video.id,
+    description: video.snippet.description,
 
-        youtubeUrl: `https://youtu.be/${video.id}`,
+    category: "",
 
-        thumbnail:
-            video.snippet.thumbnails.maxres?.url ||
-            video.snippet.thumbnails.high?.url,
+    client: "",
 
-        publishedAt: video.snippet.publishedAt,
+    country: "",
 
-        duration: formatDuration(
-            video.contentDetails.duration
-        ),
+    youtubeId: video.id,
 
-        views: Number(
-            video.statistics.viewCount
-        )
+    youtubeUrl: `https://youtu.be/${video.id}`,
 
-    }));
+    thumbnail:
+        video.snippet.thumbnails.maxres?.url ||
+        video.snippet.thumbnails.high?.url,
+
+    publishedAt: video.snippet.publishedAt,
+
+    duration: formatDuration(
+        video.contentDetails.duration
+    ),
+
+    views: Number(
+        video.statistics.viewCount
+    )
+
+}));
 
     fs.writeFileSync(
 

@@ -111,12 +111,12 @@ function TeamSection() {
 
                     <img
                         src={jaimeImage}
-                        alt="Jaime"
+                        alt="Jaime (James)"
                     />
 
                     <div className="team-image-overlay">
 
-                        <h3>Jaime</h3>
+                        <h3>Jaime (James)</h3>
 
                         <span className="team-role">
                             {t.contact.jaimeRole}
