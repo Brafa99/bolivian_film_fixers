@@ -1,7 +1,7 @@
 .hero{
     position:relative;
     width:100%;
-    height:100vh;
+    height:100svh;
     min-height:700px;
     overflow:hidden;
     background:#000;
@@ -56,17 +56,62 @@
 
 .hero-badge{
 
-    margin-bottom:20px;
+    margin-bottom:22px;
 
-    padding:10px 22px;
+    padding:10px 24px;
 
-    border-radius:30px;
+    border-radius:999px;
 
-    border:1px solid rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,.22);
 
     background:rgba(255,255,255,.08);
 
+    backdrop-filter:blur(12px);
+
+    font-family:var(--font-body);
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    letter-spacing:.18rem;
+
+    text-transform:uppercase;
+
+}
+
+
+.hero-audio-button{
+
+    position:absolute;
+
+    right:40px;
+
+    bottom:40px;
+
+    z-index:20;
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:rgba(0,0,0,.55);
+
+    color:white;
+
     backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.hero-audio-button:hover{
+
+    background:rgba(255,255,255,.15);
 
 }
 
@@ -76,13 +121,17 @@
 
     flex-direction:column;
 
-    line-height:.95;
-
     margin-bottom:28px;
 
-    font-size:clamp(3.5rem,8vw,6.5rem);
+    line-height:.92;
 
-    font-weight:800;
+    font-family:var(--font-title);
+
+    font-size:clamp(5rem,7vw,6rem);
+
+    font-weight:700;
+
+    letter-spacing:.02em;
 
     text-transform:uppercase;
 
@@ -92,27 +141,33 @@
 
     color:#D8A928;
 
+    font-weight:700;
+
 }
 
 .hero p{
 
-    width:min(700px,100%);
-
-    font-size:1.35rem;
-
-    line-height:1.8;
-
-    color:rgba(255,255,255,.92);
+    width:min(720px,100%);
 
     margin-bottom:45px;
+
+    font-family:var(--font-body);
+
+    font-size:1.18rem;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:rgba(255,255,255,.88);
 
 }
 
 .hero-button{
 
-    padding:18px 38px;
+    padding:18px 40px;
 
-    border-radius:40px;
+    border-radius:999px;
 
     background:#D8A928;
 
@@ -120,7 +175,13 @@
 
     text-decoration:none;
 
+    font-family:var(--font-body);
+
+    font-size:1rem;
+
     font-weight:600;
+
+    letter-spacing:.08rem;
 
     transition:.35s;
 
@@ -182,20 +243,75 @@
 
 @media (max-width:768px){
 
-    .hero h1{
+    .hero{
 
-        font-size:3.2rem;
+        min-height:100svh;
 
     }
 
     .hero-content{
 
-        padding-inline:20px;
+        width:min(92%,100%);
+
+        padding:0 20px;
+
+    }
+
+    .hero-badge{
+
+        margin-bottom:18px;
+
+        padding:9px 18px;
+
+        font-size:.78rem;
+
+        letter-spacing:.14rem;
+
+    }
+
+    .hero h1{
+
+        font-size:clamp(3rem,12vw,4.2rem);
+
+        line-height:.98;
+
+        margin-bottom:22px;
+
+    }
+
+    .hero p{
+
+        width:100%;
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+        margin-bottom:34px;
+
+    }
+
+    .hero-button{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+        padding:16px 24px;
+
+    }
+
+    .scroll-indicator{
+
+        bottom:20px;
+
+        font-size:1.6rem;
 
     }
 
 }
-
 @keyframes heroFade{
 
     from{

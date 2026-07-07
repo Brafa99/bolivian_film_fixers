@@ -38,6 +38,7 @@
 .section-title.light{
 
     text-align:center;
+    font-family:var(--font-title);
 
     margin-bottom:110px;
 
@@ -46,6 +47,7 @@
 .section-title.light span{
 
     display:block;
+    font-family:var(--font-body);
 
     margin-bottom:18px;
 
@@ -115,6 +117,7 @@
 
     font-weight:800;
 
+
     color:white;
 
     line-height:1;
@@ -128,6 +131,7 @@
 .number-card p{
 
     margin-top:24px;
+    font-family:var(--font-body);
 
     font-size:1rem;
 

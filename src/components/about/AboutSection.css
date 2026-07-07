@@ -83,6 +83,7 @@
 
     margin-bottom:28px;
     color:#D8A928;
+    font-family:var(--font-title);
 
     font-size:clamp(2.2rem,5vw,3.2rem);
 
@@ -95,6 +96,7 @@
     font-size:1.18rem;
 
     line-height:2.05;
+    font-family:var(--font-body);
 
     color:rgba(255,255,255,.90);
 

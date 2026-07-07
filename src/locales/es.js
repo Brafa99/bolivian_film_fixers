@@ -99,7 +99,7 @@ contact: {
     cardDescription:
         "Ya sea un documental, una serie de televisión, un comercial o una producción internacional, estamos listos para ayudarte a filmar en cualquier lugar de Bolivia.",
 
-    yayaRole: "Film Fixer",
+    yayaRole: "Productora Ejecutiva",
 
     jaimeRole: "Productor Ejecutivo",
 

@@ -1,7 +1,7 @@
 import "./ContactForm.css";
 
 import { useState } from "react";
-
+import emailjs from "@emailjs/browser";
 import useLanguage from "../../hooks/useLanguage";
 import contact from "../../data/contact";
 
@@ -11,13 +11,15 @@ function ContactForm() {
 
     const [loading, setLoading] = useState(false);
 
-    const [form, setForm] = useState({
+const [success, setSuccess] = useState("");
 
-        name: "",
-        email: "",
-        message: ""
+const [form, setForm] = useState({
 
-    });
+    name: "",
+    email: "",
+    message: ""
+
+});
 
     function handleChange(e) {
 
@@ -31,27 +33,54 @@ function ContactForm() {
 
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        setLoading(true);
+    setLoading(true);
 
-        const text = `
-${t.contact.whatsappMessage}
+    setSuccess("");
 
-👤 ${t.contact.formName}: ${form.name}
+    try {
 
-📧 ${t.contact.formEmail}: ${form.email}
+        await emailjs.send(
 
-📝 ${t.contact.formMessage}
+            import.meta.env.VITE_EMAILJS_SERVICE,
+            import.meta.env.VITE_EMAILJS_TEMPLATE,
 
-${form.message}
-`;
+            {
 
-        const url = `https://wa.me/${contact.yaya.whatsapp}?text=${encodeURIComponent(text)}`;
+                name: form.name,
+                email: form.email,
+                message: form.message
 
-        window.open(url, "_blank");
+            },
+
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+        );
+
+        setSuccess(t.contact.success);
+
+        const whatsappNumber = "59177538707";
+
+        const whatsappMessage = `Hello Yaya!
+
+I found Bolivian Film Fixers through your website and would like to get in touch.
+
+Name: ${form.name}
+Email: ${form.email}
+
+Project Details:
+${form.message}`;
+
+        window.open(
+
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+
+            "_blank"
+
+        );
 
         setForm({
 
@@ -61,9 +90,19 @@ ${form.message}
 
         });
 
-        setLoading(false);
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        alert(t.contact.error);
 
     }
+
+    setLoading(false);
+
+}
 
     return (
 

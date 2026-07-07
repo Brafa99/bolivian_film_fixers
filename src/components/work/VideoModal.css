@@ -32,7 +32,8 @@
 
     overflow-y:auto;
 
-    background:#fff;
+   
+    background:rgba(80, 80, 80, 0.185);
 
     border-radius:22px;
 
@@ -61,8 +62,9 @@
     padding:28px 32px 12px;
 
     font-size:1.8rem;
+    font-family:var(--font-body);
 
-    color:#222;
+    color:#a8a8a8;
 
 }
 
@@ -70,7 +72,8 @@
 
     padding:0 32px 32px;
 
-    color:#666;
+    color:#979797;
+    font-family:var(--font-body);
 
     line-height:1.8;
 

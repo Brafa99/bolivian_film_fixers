@@ -18,6 +18,15 @@ function Work() {
 
     const [selectedProject, setSelectedProject] = useState(null);
 
+
+    const handleOpenProject = (project) => {
+
+    window.dispatchEvent(new Event("pauseHeroAudio"));
+
+    setSelectedProject(project);
+
+};
+
     const categories = useMemo(() => [
 
         "All",
@@ -82,10 +91,10 @@ function Work() {
                 {filteredProjects.map(project => (
 
                     <ProjectCard
-                        key={project.id}
-                        project={project}
-                        onOpen={setSelectedProject}
-                    />
+    key={project.id}
+    project={project}
+    onOpen={handleOpenProject}
+/>
 
                 ))}
 

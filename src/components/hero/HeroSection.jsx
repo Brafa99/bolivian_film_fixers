@@ -1,12 +1,92 @@
 import "./HeroSection.css";
-
 import heroVideo from "../../assets/videos/boliviafilm.mp4";
-
 import useLanguage from "../../hooks/useLanguage";
-
+import { useEffect, useRef, useState } from "react";
+import heroAudio from "../../assets/audio/audio2.mp3";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 function HeroSection() {
 
     const { t } = useLanguage();
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+
+    useEffect(() => {
+
+    const pauseAudio = () => {
+
+    if (!audioRef.current) return;
+
+    audioRef.current.pause();
+
+    setIsPlaying(false);
+
+    window.removeEventListener("click", startAudio);
+    window.removeEventListener("scroll", startAudio);
+
+};
+
+    window.addEventListener("pauseHeroAudio", pauseAudio);
+
+    return () => {
+
+        window.removeEventListener("pauseHeroAudio", pauseAudio);
+
+    };
+
+}, []);
+
+    useEffect(() => {
+
+    const startAudio = () => {
+
+        audioRef.current?.play()
+            .then(() => {
+
+                setIsPlaying(true);
+
+            })
+            .catch(() => {});
+
+        window.removeEventListener("click", startAudio);
+        window.removeEventListener("scroll", startAudio);
+
+    };
+
+    window.addEventListener("click", startAudio);
+
+    window.addEventListener("scroll", startAudio);
+
+    return () => {
+
+        window.removeEventListener("click", startAudio);
+        window.removeEventListener("scroll", startAudio);
+
+    };
+
+}, []);
+
+const toggleAudio = () => {
+
+    const audio = audioRef.current;
+
+    if (!audio) return;
+
+    if (audio.paused) {
+
+        audio.play();
+
+        setIsPlaying(true);
+
+    } else {
+
+        audio.pause();
+
+        setIsPlaying(false);
+
+    }
+
+};
 
     return (
 
@@ -34,6 +114,34 @@ function HeroSection() {
 
             </video>
 
+            <audio
+    ref={audioRef}
+    preload="auto"
+    playsInline
+>
+
+    <source
+        src={heroAudio}
+        type="audio/mpeg"
+    />
+
+</audio>
+<button
+    className="hero-audio-button"
+    onClick={toggleAudio}
+>
+
+    {
+
+        isPlaying
+
+            ? <FaVolumeUp />
+
+            : <FaVolumeMute />
+
+    }
+
+</button>
             <div className="hero-overlay"></div>
 
             <div className="hero-content">
@@ -62,6 +170,7 @@ function HeroSection() {
 
                 </p>
 
+             
                 <a
                     href="#work"
                     className="hero-button"

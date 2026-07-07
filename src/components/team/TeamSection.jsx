@@ -4,12 +4,13 @@ import useLanguage from "../../hooks/useLanguage";
 
 import backgroundImage from "../../assets/images/placeholders/1920x1200-0.jpg";
 
-import yayaImage from "../../assets/images/team/yaya.jpg";
-import jaimeImage from "../../assets/images/team/jaime.jpg";
+import yayaImage from "../../assets/images/team/yaya.jpeg";
+import jaimeImage from "../../assets/images/team/jaime.jpeg";
 
 function TeamSection() {
 
     const { t } = useLanguage();
+  
 
     return (
 
@@ -48,7 +49,7 @@ function TeamSection() {
 
             </div>
 
-            <div className="team-member">
+            <div className="team-member reverse2">
 
                 <div className="team-image">
 
@@ -62,7 +63,8 @@ function TeamSection() {
                         <h3>Hidaya (Yaya)</h3>
 
                         <span className="team-role">
-    Film Fixer
+                            {t.contact.yayaRole}
+
 </span>
 
                     </div>
@@ -117,7 +119,8 @@ function TeamSection() {
                         <h3>Jaime</h3>
 
                         <span className="team-role">
-    Executive Producer
+                            {t.contact.jaimeRole}
+
 </span>
 
                     </div>

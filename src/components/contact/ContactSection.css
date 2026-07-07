@@ -65,6 +65,7 @@
     display:inline-block;
 
     margin-bottom:24px;
+    font-family:var(--font-title);
 
     color:#D8A928;
 
@@ -87,6 +88,7 @@
     color:#fff;
 
     font-size:clamp(2rem,3vw,2.2rem);
+    font-family:var(--font-body);
 
     font-weight:700;
 

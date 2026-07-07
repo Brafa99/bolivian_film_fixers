@@ -91,7 +91,7 @@ contact: {
 
     subtitle: "CONTACT",
 
-    title: "BOLIVIAN FILM FIXER MORE THAN AN EXPERIENCE: A FRIENDSHIP! SEE YOU SOON!",
+    title: "BOLIVIAN FILM FIXERS, MORE THAN AN EXPERIENCE: A FRIENDSHIP! SEE YOU SOON!",
 
     label: "LET'S TALK",
 
@@ -100,7 +100,7 @@ contact: {
     cardDescription:
         "Whether you're planning a documentary, television series, commercial or international production, we're ready to help you film anywhere in Bolivia.",
 
-    yayaRole: "Film Fixer",
+    yayaRole: "Executive Producer",
 
     jaimeRole: "Executive Producer",
 

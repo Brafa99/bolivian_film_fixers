@@ -1,6 +1,6 @@
 .project-card{
 
-    background:#fff;
+    background:#7e7d7d8a;
 
     border-radius:18px;
 
@@ -115,6 +115,7 @@
     display:inline-block;
 
     margin-bottom:10px;
+    font-family:var(--font-body);
 
     color:#d6a317;
 
@@ -135,6 +136,7 @@
     color:#222;
 
     line-height:1.45;
+    font-family:var(--font-body);
 
     margin:0;
 
