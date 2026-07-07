@@ -8,23 +8,20 @@ function HeroSection() {
 
     const { t } = useLanguage();
     const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false)
 
 
     useEffect(() => {
 
     const pauseAudio = () => {
 
-    if (!audioRef.current) return;
+        if (!audioRef.current) return;
 
-    audioRef.current.pause();
+        audioRef.current.pause();
 
-    setIsPlaying(false);
+        setIsPlaying(false);
 
-    window.removeEventListener("click", startAudio);
-    window.removeEventListener("scroll", startAudio);
-
-};
+    };
 
     window.addEventListener("pauseHeroAudio", pauseAudio);
 
@@ -36,33 +33,47 @@ function HeroSection() {
 
 }, []);
 
-    useEffect(() => {
+   useEffect(() => {
 
-    const startAudio = () => {
+    const startAudio = async () => {
 
-        audioRef.current?.play()
-            .then(() => {
+        const audio = audioRef.current;
 
-                setIsPlaying(true);
+        if (!audio) return;
 
-            })
-            .catch(() => {});
+        try {
 
-        window.removeEventListener("click", startAudio);
-        window.removeEventListener("scroll", startAudio);
+            audio.volume = 0.35;
+
+            await audio.play();
+
+            setIsPlaying(true);
+
+            console.log("Audio iniciado");
+
+        } catch (err) {
+
+            console.log("Error:", err.name);
+            console.log(err.message);
+
+        }
+
+        document.removeEventListener("pointerdown", startAudio);
+        document.removeEventListener("keydown", startAudio);
 
     };
 
-    window.addEventListener("click", startAudio);
-
-    window.addEventListener("scroll", startAudio);
+    document.addEventListener("pointerdown", startAudio);
+document.addEventListener("keydown", startAudio);
+window.addEventListener("scroll", startAudio, { once: true });
 
     return () => {
 
-        window.removeEventListener("click", startAudio);
-        window.removeEventListener("scroll", startAudio);
+    document.removeEventListener("pointerdown", startAudio);
+    document.removeEventListener("keydown", startAudio);
+    window.removeEventListener("scroll", startAudio);
 
-    };
+};
 
 }, []);
 
@@ -118,6 +129,7 @@ const toggleAudio = () => {
     ref={audioRef}
     preload="auto"
     playsInline
+    muted={false}
 >
 
     <source
