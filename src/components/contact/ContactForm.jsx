@@ -7,12 +7,9 @@ import contact from "../../data/contact";
 
 function ContactForm() {
 
-    const { t } = useLanguage();
-
-    const [loading, setLoading] = useState(false);
-
+const { t } = useLanguage();
+const [loading, setLoading] = useState(false);
 const [success, setSuccess] = useState("");
-
 const [form, setForm] = useState({
 
     name: "",
