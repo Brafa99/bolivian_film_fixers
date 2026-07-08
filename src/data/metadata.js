@@ -151,8 +151,21 @@ export default {
   },
 
   "gX4V__oG-wk": {
+    category: "Photoshoot",
+    client: "OPP",
+    country: "Brazil",
+  },
+
+  "LawnxU8OUNs": {
+    category: "Photoshoot",
+    client: "OPP",
+    country: "Brazil",
+  },
+  
+  "HW9BGbBW75A": {
     category: "Commercial",
     client: "OPP",
     country: "Brazil",
   },
+  
 };

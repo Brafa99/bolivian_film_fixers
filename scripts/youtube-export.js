@@ -15,10 +15,6 @@ const youtube = google.youtube({
 
 const EXTRA_VIDEO_URLS = [
 
-    "https://youtu.be/B2PC_7wkhPQ",
-
-    "https://youtu.be/fUn7Nm9qZ9A",
-
     "https://youtu.be/OmXsSfiIJHI",
 
     "https://youtu.be/A7ZFN7X5lZU",
@@ -29,7 +25,11 @@ const EXTRA_VIDEO_URLS = [
 
     "https://www.youtube.com/watch?v=14rnnr3-kLU",
 
-    "https://youtu.be/gX4V__oG-wk"
+    "https://youtu.be/gX4V__oG-wk",
+
+    "https://youtu.be/LawnxU8OUNs?si=ZWFNBfUFzUYgtTSi",
+
+    "https://youtu.be/HW9BGbBW75A",
 
 ];
 

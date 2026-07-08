@@ -24,11 +24,11 @@ jaime:{
 
 },
 
-    facebook:"...",
+    facebook:"https://www.facebook.com/bolivianfilmfixers",
 
-    instagram:"...",
+    instagram:"https://www.instagram.com/bolivianfilmfixers",
 
-    youtube:"...",
+    youtube:"https://www.youtube.com/@bolivianfilmfixers1482",
 
     vimeo:"..."
 

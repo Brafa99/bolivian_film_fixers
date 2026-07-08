@@ -39,7 +39,7 @@ export default [
     "thumbnail": "https://i.ytimg.com/vi/gYQFbht6XD8/maxresdefault.jpg",
     "publishedAt": "2020-06-25T00:00:09Z",
     "duration": "0:27",
-    "views": 358
+    "views": 359
   },
   {
     "id": 4,
@@ -253,48 +253,20 @@ export default [
   },
   {
     "id": 19,
-    "title": "Rede Record Cerro Rico devora homens",
-    "description": "Potosí, Bolivia.",
-    "category": "Documentary",
-    "client": "Rede Record",
-    "country": "Brazil",
-    "youtubeId": "B2PC_7wkhPQ",
-    "youtubeUrl": "https://youtu.be/B2PC_7wkhPQ",
-    "thumbnail": "https://i.ytimg.com/vi/B2PC_7wkhPQ/maxresdefault.jpg",
-    "publishedAt": "2024-01-23T01:43:43Z",
-    "duration": "48:07",
-    "views": 137
-  },
-  {
-    "id": 20,
-    "title": "Rede Record Manitoba estupro de fantasmas",
-    "description": "Manitoba, Santa Cruz, Bolivia.",
-    "category": "Documentary",
-    "client": "Rede Record",
-    "country": "Brazil",
-    "youtubeId": "fUn7Nm9qZ9A",
-    "youtubeUrl": "https://youtu.be/fUn7Nm9qZ9A",
-    "thumbnail": "https://i.ytimg.com/vi/fUn7Nm9qZ9A/maxresdefault.jpg",
-    "publishedAt": "2024-01-23T01:22:56Z",
-    "duration": "23:58",
-    "views": 30
-  },
-  {
-    "id": 21,
     "title": "New Findings on the pre Columbian occupation of the Mojos plains",
     "description": "00:00 Title\n00:21 Intro\n00:49 Umberto\n02:16 Phytoliths\n04:06 Frank\n05:53 Hundreds of mounds\n06:20 Umberto & Frank\n08:05 More questions\n08:26 Credits\n08:59 Sponsors",
     "category": "Documentary",
-    "client": "Universidad de Barcelona & University of Reading",
+    "client": "University of Reading",
     "country": "Spain & UK",
     "youtubeId": "OmXsSfiIJHI",
     "youtubeUrl": "https://youtu.be/OmXsSfiIJHI",
     "thumbnail": "https://i.ytimg.com/vi/OmXsSfiIJHI/maxresdefault.jpg",
     "publishedAt": "2023-03-03T15:26:01Z",
     "duration": "9:58",
-    "views": 118
+    "views": 119
   },
   {
-    "id": 22,
+    "id": 20,
     "title": "LOST KINGDOMS OF THE AMAZON",
     "description": "JUNGLE MYSTERY: LOST KINGDOMS OF THE AMAZON\nIn the Colombian jungle, Ella looks at rock paintings depicting fauna from 15,000 years ago. They were left by nomadic hunters, who migrated into the Amazon basin when it was still covered by a savanna. In Bolivia, Ella examines 6,000 year old remains of the first people to adopt a sedentary lifestyle in the area, making their homes on artificial middens to raise them above the flood planes.\nDirectors: Steven Grandison, Martin Kemp.",
     "category": "Documentary",
@@ -308,7 +280,7 @@ export default [
     "views": 558
   },
   {
-    "id": 23,
+    "id": 21,
     "title": "Reizen Waes - Bolivia",
     "description": "Reizen Waes is a highly popular Belgian-Dutch television travel documentary series hosted by adventurer and actor Tom Waes. Known for visiting extreme, misunderstood, or off-the-beaten-path destinations, the show dives deep into local cultures, often exploring locations impacted by civil unrest, isolation, or extreme environments.",
     "category": "Reality TV",
@@ -319,11 +291,11 @@ export default [
     "thumbnail": "https://i.ytimg.com/vi/VaVDEibbbvM/hqdefault.jpg",
     "publishedAt": "2026-07-05T23:19:14Z",
     "duration": "42:03",
-    "views": 11
+    "views": 12
   },
   {
-    "id": 24,
-    "title": "【地上波未公開】森七菜が「ウユニの塩」精製工場へ IN ボリビア",
+    "id": 22,
+    "title": "Another Sky",
     "description": "日本テレビ「Google Pixel presents ANOTHER SKY」\n2月3日 (土) よる 23:00–23:30\nHP：https://anothersky-ntv.com\n\n「忘れられない空がある。」\n海外や国内にある、想い出深い場所を訪れるゲストに密着。\nその場所との縁とは？ゲストのルーツやターニングポイント、人生観などを紐解きます。\nそして、アナザースカイの地で語る未来とは…\nMC今田耕司と八木莉可子が、ゲストの人となりを解き明かします。\n\nSNS \nInstagram：https://www.instagram.com/anothersky_ntv\nX：https://x.com/ANOTHERSKY_NTV\nTikTok：https://www.tiktok.com/@anothersky_ntv\n\n配信サイト\nTVer：https://tver.jp/series/srqd4f3ihj （１週間無料で配信）\nHulu：https://bit.ly/3yorF4E （見逃し配信中）\n\n#ANOTHERSKY #アナザースカイ #GooglePixel  #今田耕司 #八木莉可子 #森七菜 #ボリビア",
     "category": "Reality TV",
     "client": "Boom Up CO. LTD",
@@ -333,10 +305,10 @@ export default [
     "thumbnail": "https://i.ytimg.com/vi/hZH-5kI3reM/maxresdefault.jpg",
     "publishedAt": "2024-02-03T11:00:26Z",
     "duration": "3:58",
-    "views": 22625
+    "views": 22627
   },
   {
-    "id": 25,
+    "id": 23,
     "title": "【地上波未公開】森七菜がボリビア料理にリベンジ",
     "description": "日本テレビ「Google Pixel presents ANOTHER SKY」\n2月3日 (土) よる 23:00–23:30\nHP：https://anothersky-ntv.com\n\n「忘れられない空がある。」\n海外や国内にある、想い出深い場所を訪れるゲストに密着。\nその場所との縁とは？ゲストのルーツやターニングポイント、人生観などを紐解きます。\nそして、アナザースカイの地で語る未来とは…\nMC今田耕司と八木莉可子が、ゲストの人となりを解き明かします。\n\nSNS \nInstagram：https://www.instagram.com/anothersky_ntv\nX：https://x.com/ANOTHERSKY_NTV\nTikTok：https://www.tiktok.com/@anothersky_ntv\n\n配信サイト\nTVer：https://tver.jp/series/srqd4f3ihj （１週間無料で配信）\nHulu：https://bit.ly/3yorF4E （見逃し配信中）\n\n#ANOTHERSKY #アナザースカイ #GooglePixel  #今田耕司 #八木莉可子 #森七菜 #ボリビア",
     "category": "Reality TV",
@@ -347,13 +319,13 @@ export default [
     "thumbnail": "https://i.ytimg.com/vi/14rnnr3-kLU/maxresdefault.jpg",
     "publishedAt": "2024-02-03T09:00:03Z",
     "duration": "2:00",
-    "views": 31619
+    "views": 31621
   },
   {
-    "id": 26,
+    "id": 24,
     "title": "Comercial  Bivik 30''",
-    "description": "https://www.bivikjeans.com.br",
-    "category": "Commercial",
+    "description": "JEANS BIVIK is one of Brazil’s largest and most prominent denim manufacturers. Founded in 1983, the company is headquartered in the bustling textile and wholesale district of Brás, São Paulo. For over 40 years, the brand has been a dominant force in the national market, manufacturing clothing like jeans, jackets, shorts, and skirts for men, women, and children. They are highly regarded for their vast product variety, modern washes, and inclusive size ranges stretching from slim to plus sizes. Catering heavily to the B2B market, Bivik operates a major wholesale and supply hub that ships affordable, high-quality casual wear to retailers and shop owners throughout all of Brazil.",
+    "category": "Photoshoot",
     "client": "OPP",
     "country": "Brazil",
     "youtubeId": "gX4V__oG-wk",
@@ -361,6 +333,34 @@ export default [
     "thumbnail": "https://i.ytimg.com/vi/gX4V__oG-wk/maxresdefault.jpg",
     "publishedAt": "2026-07-07T02:06:46Z",
     "duration": "0:31",
-    "views": 1
+    "views": 2
+  },
+  {
+    "id": 25,
+    "title": "Seiva",
+    "description": "FARM Rio is one of Brazil’s most celebrated contemporary fashion and lifestyle brands. Founded in 1997 by friends Kátia Barros and Marcello Bastos, it began as a small booth at a local independent marketplace in Rio de Janeiro. The brand is famous for capturing the vibrant \"carioca\" spirit, using maximalist aesthetics, eye-catching tropical prints, and bright, nature-inspired color palettes. Today, it operates over 80 stores across Brazil and is a key brand under AZZAS 2154, the country's largest fashion retail group. After launching its international expansion in 2019, FARM Rio has achieved massive global success, opening flagship boutiques in major fashion capitals like New York, Los Angeles, London, and Paris, while partnering with organizations like One Tree Planted to fund Amazon reforestation.",
+    "category": "Photoshoot",
+    "client": "Farm Rio",
+    "country": "Brazil",
+    "youtubeId": "LawnxU8OUNs",
+    "youtubeUrl": "https://youtu.be/LawnxU8OUNs",
+    "thumbnail": "https://i.ytimg.com/vi/LawnxU8OUNs/maxresdefault.jpg",
+    "publishedAt": "2026-07-07T23:04:09Z",
+    "duration": "1:32",
+    "views": 0
+  },
+  {
+    "id": 26,
+    "title": "AUDI  Streets",
+    "description": "The Audi TV advertisement titled \"#city,\" part of the brand’s global \"Untaggable\" campaign launched in 2017, prominently features the breathtaking and dramatic urban landscape of La Paz, Bolivia. Directed by the prominent south London-based design and film collective Factory Fifteen, the commercial serves as a dreamlike, cross-cultural study of the modern urban experience across four extraordinary global cities: London, New Orleans, Tokyo, and La Paz. Set to a hypnotic, custom electronic track by the genre-blurring underground vocalist Gaika, the film uses La Paz’s steep Andean canyon setting, densely packed brick architecture, and iconic Mi Teleférico cable car network to evoke an impossible-to-define energy. By tracking colorful local characters amidst the city's chaotic yet beautiful backdrop, the advertisement visually parallels the versatile, genre-defying nature of Audi's premium vehicles.",
+    "category": "Commercial",
+    "client": "Audi",
+    "country": "UK",
+    "youtubeId": "HW9BGbBW75A",
+    "youtubeUrl": "https://youtu.be/HW9BGbBW75A",
+    "thumbnail": "https://i.ytimg.com/vi/HW9BGbBW75A/maxresdefault.jpg",
+    "publishedAt": "2026-07-07T23:42:56Z",
+    "duration": "3:04",
+    "views": 0
   }
 ];

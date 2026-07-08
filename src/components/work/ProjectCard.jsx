@@ -1,5 +1,5 @@
 import "./ProjectCard.css";
-
+import ReactCountryFlag from "react-country-flag";
 function ProjectCard({ project, onOpen }) {
 
     const thumbnail = project.thumbnail
@@ -36,15 +36,31 @@ function ProjectCard({ project, onOpen }) {
 
             <div className="project-info">
 
-                {project.category && (
-                    <span className="project-category">
-                        {project.category}
-                    </span>
-                )}
+    {project.category && (
+        <span className="project-category">
+            {project.category}
+        </span>
+    )}
 
-                <h3>{project.title}</h3>
+    <h3>{project.title}</h3>
 
-            </div>
+    <div className="project-meta">
+
+        {project.country && (
+            <span className="project-country">
+                📍 {project.country}
+            </span>
+        )}
+
+        {project.client && (
+            <span className="project-client">
+                {project.client}
+            </span>
+        )}
+
+    </div>
+
+</div>
 
         </article>
 

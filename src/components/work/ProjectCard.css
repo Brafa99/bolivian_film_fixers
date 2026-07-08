@@ -144,15 +144,76 @@
 
 }
 
+
+.project-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:14px;
+
+    font-family:var(--font-body);
+
+}
+
+.project-country{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    font-size:.78rem;
+
+    color:#d6d6d6;
+
+    font-weight:500;
+
+}
+
+.project-client{
+
+    max-width:60%;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#D8A928;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+}
+
 @media(max-width:768px){
 
-    .play-button{
+    .project-meta{
 
-        width:60px;
+        gap:8px;
 
-        height:60px;
+    }
 
-        font-size:24px;
+    .project-country{
+
+        font-size:.72rem;
+
+    }
+
+    .project-client{
+
+        font-size:.72rem;
+
+        max-width:55%;
 
     }
 

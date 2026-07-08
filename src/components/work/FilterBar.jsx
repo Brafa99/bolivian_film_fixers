@@ -1,6 +1,10 @@
 import "./FilterBar.css";
+import { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 function FilterBar({ categories, active, onChange }) {
+
+    const { t } = useContext(LanguageContext);
 
     return (
 
@@ -16,7 +20,7 @@ function FilterBar({ categories, active, onChange }) {
                     onClick={() => onChange(category)}
                 >
 
-                    {category}
+                    {t.categories?.[category] || category}
 
                 </button>
 

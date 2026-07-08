@@ -134,6 +134,16 @@ formDescription:
 
 },
 
+
+categories: {
+  All: "Todos",
+  Documentary: "Documental",
+  Commercial: "Comercial",
+  "Reality TV": "Reality TV",
+  Adventure: "Aventura",
+  Photoshoot: "Sesión Fotográfica",
+},
+
 whatsappMessage:
     "¡Hola! Vi la página web de Bolivian Film Fixers y me gustaría recibir más información sobre sus servicios de producción en Bolivia.",
 

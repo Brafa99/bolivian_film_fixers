@@ -83,7 +83,7 @@ function ContactCard() {
 
                     <h3>
 
-                        Jaime
+                        Jaime (James)
 
                     </h3>
 

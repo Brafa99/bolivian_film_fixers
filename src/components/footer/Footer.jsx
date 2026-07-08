@@ -74,7 +74,7 @@ function Footer() {
                         <FaYoutube />
                     </a>
 
-                    <a
+                    {/* <a
                         href={contact.vimeo}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -90,7 +90,7 @@ function Footer() {
                         aria-label="LinkedIn"
                     >
                         <FaLinkedinIn />
-                    </a>
+                    </a> */}
 
                 </div>
 
@@ -115,6 +115,26 @@ function Footer() {
                 © {year} Bolivian Film Fixers. All Rights Reserved.
 
             </div>
+
+            <div className="footer-signature">
+
+    <span className="signature-powered">
+        Powered by
+    </span>
+
+    <div className="signature-brand">
+
+        <span className="signature-name">
+            BrafaCorp
+        </span>
+
+        <span className="signature-subtitle">
+            Digital Solutions
+        </span>
+
+    </div>
+
+</div>
 
         </footer>
 
