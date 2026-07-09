@@ -2,11 +2,15 @@ import "./HeroSection.css";
 import heroVideo from "../../assets/videos/boliviafilm.mp4";
 import useLanguage from "../../hooks/useLanguage";
 import { useEffect, useRef, useState } from "react";
-import heroAudio from "../../assets/audio/audio2.mp3";
+import heroAudioEn from "../../assets/audio/audio2.mp3";
+import heroAudioEs from "../../assets/audio/audio2_es.mp3";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 function HeroSection() {
 
-    const { t } = useLanguage();
+    const {
+    t,
+    language,
+} = useLanguage();
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false)
 
@@ -121,6 +125,34 @@ function HeroSection() {
 }, []);
 
 
+useEffect(() => {
+
+    const audio = audioRef.current;
+
+    if (!audio) return;
+
+    const wasPlaying = !audio.paused;
+
+    audio.pause();
+
+    audio.src =
+        language === "es"
+            ? heroAudioEs
+            : heroAudioEn;
+
+    audio.load();
+
+    if (wasPlaying) {
+
+        audio.play()
+            .then(() => setIsPlaying(true))
+            .catch(() => setIsPlaying(false));
+
+    }
+
+}, [language]);
+
+
 const toggleAudio = () => {
 
     const audio = audioRef.current;
@@ -181,17 +213,11 @@ const toggleAudio = () => {
 
             <audio
     ref={audioRef}
+    src={heroAudioEn}
     preload="auto"
     playsInline
-    muted={false}
->
+/>
 
-    <source
-        src={heroAudio}
-        type="audio/mpeg"
-    />
-
-</audio>
 <button
     className="hero-audio-button"
     onClick={toggleAudio}
