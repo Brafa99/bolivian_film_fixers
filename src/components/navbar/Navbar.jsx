@@ -101,39 +101,43 @@ function Navbar() {
 
                     </ul>
 
-                    <div className="language-selector">
+                    <div className="language-card">
 
-                        <button
-                            className={language === "en" ? "active" : ""}
-                            onClick={() => {
+    <span className="language-title">
 
-                                changeLanguage("en");
+        🌐 {language === "es" ? "Idioma" : "Language"}
 
-                                closeMenu();
+    </span>
 
-                            }}
-                        >
+    <div className="language-selector">
 
-                            🇺🇸 EN
+        <button
+            className={language === "en" ? "active" : ""}
+            onClick={() => {
 
-                        </button>
+                changeLanguage("en");
+                closeMenu();
 
-                        <button
-                            className={language === "es" ? "active" : ""}
-                            onClick={() => {
+            }}
+        >
+            🇺🇸 EN
+        </button>
 
-                                changeLanguage("es");
+        <button
+            className={language === "es" ? "active" : ""}
+            onClick={() => {
 
-                                closeMenu();
+                changeLanguage("es");
+                closeMenu();
 
-                            }}
-                        >
+            }}
+        >
+            🇪🇸 ES
+        </button>
 
-                            🇪🇸 ES
+    </div>
 
-                        </button>
-
-                    </div>
+</div>
 
                 </nav>
 
