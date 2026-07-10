@@ -23,7 +23,7 @@ export default {
 
   work:{
 
-    subtitle:"OUR PROJECT",
+    subtitle:"OUR PROJECTS",
 
     title:"Featured Productions",
 
