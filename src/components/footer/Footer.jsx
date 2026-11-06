@@ -112,7 +112,7 @@ function Footer() {
 
             <div className="footer-bottom">
 
-                © {year} Bolivian Film Fixers. All Rights Reserved.
+                © {year} Bolivian Film Fixers. All Rights Reserved. La Paz-Bolivia
 
             </div>
 
